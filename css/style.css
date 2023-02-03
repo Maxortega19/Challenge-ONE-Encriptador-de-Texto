@@ -1,63 +1,67 @@
+/*universal setting for no body margins*/
 * {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
 
-/* Style the body */
+html,
 body {
-    font-family: Arial;
-    margin: 0;
-    background-color: aqua;
+    height: 100%;
 }
 
 
 header {
     width: 100%;
-    text-align: center;
-    line-height: 75px;
-    font-size: 30px;
+    text-align: left;
     background-color: grey;
+    /* arriba y abajo | izquierda y derecha */
+    padding: 3% 5%;
 }
 
 
 
-.flex-container {
+main {
+    width: 100%;
+    height: 70%;
+    justify-content: space-between;
     display: flex;
     flex-wrap: wrap;
+    /* Dirección en fila */
     flex-direction: row;
     background-color: green;
 }
 
-.main {
-    flex: auto;
-    text-align: center;
-    line-height: 75px;
-    font-size: 30px;
+.entrada {
+    width: 70%;
     background-color: red;
 }
 
-.exit {
-    flex: auto;
-    text-align: center;
-    line-height: 75px;
-    font-size: 30px;
+.salida {
+    width: 20%;
     background-color: blue;
 }
 
 footer {
-    position: fixed;
     /* Fijado en la posición de abajo*/
+    position: fixed;
     bottom: 0;
     width: 100%;
     text-align: center;
-    line-height: 75px;
-    font-size: 30px;
     background-color: black;
 }
 
 
 /* Cuando la pantalla es menor a 700px la dirección de los items flex va a ser uno bajo al otro */
 @media screen and (max-width: 700px) {
-    .flex-container {
+    main {
         flex-direction: column;
+    }
+
+    .entrada,
+    .salida {
+        width: 100%;
     }
 }

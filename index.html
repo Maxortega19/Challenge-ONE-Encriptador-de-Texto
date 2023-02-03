@@ -12,17 +12,27 @@
 <body>
 
     <header>
-        <nav>Logo Alura</nav>
+        <nav>
+            <img src="images/logoalura.svg" alt="Logo Alura">
+        </nav>
     </header>
 
-    <div class="flex-container">
-        <section class="main">
-            Ingrese texto
+    <main>
+
+        <section class="entrada">
+            <textarea name="texto" placeholder="Ingrese el texto" id="texto" cols="30" rows="10"></textarea>
+            <div>
+                <button>Encriptar</button>
+                <button>Desencriptar</button>
+            </div>
         </section>
-        <section class="exit">
-            Resultado
+
+        <section class="salida">
+            <h3>No se encontro ningun texto</h3>
+            <button>Copiar</button>
         </section>
-    </div>
+
+    </main>
 
     <footer>
         Footer
