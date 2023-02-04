@@ -6,11 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <title>Encriptador </title>
+    <title>ENCRIPTADOR </title>
 </head>
 
-<body>
-
+<body class="bg">
     <header>
         <nav>
             <img src="images/logoalura.svg" alt="Logo Alura">
@@ -18,25 +17,24 @@
     </header>
 
     <main>
-
+ 
         <section class="entrada">
-            <textarea name="texto" placeholder="Ingrese el texto" id="texto" cols="30" rows="10"></textarea>
+            <textarea class="chat-textarea ui-box crt" name="text-in" placeholder="Ingrese el texto" id="text-in" cols="30" rows="10"></textarea>
             <div>
-                <button>Encriptar</button>
-                <button>Desencriptar</button>
+                <button id="btn-encrip" class="button btn-cyber-punk crt">ENCRIPTAR</button>
+                <button id="btn-desencrip" class="button btn-cyber-punk crt">DESENCRIPTAR</button>
             </div>
         </section>
 
         <section class="salida">
-            <h3>No se encontro ningun texto</h3>
-            <button>Copiar</button>
+            <textarea class="chat-textarea ui-box crt" name="text-out" placeholder="No se encontró ningun texto" id="text-out" cols="30" rows="10" readonly></textarea>
+            <button id="btn-copy" class="button btn-cyber-punk crt" >COPIAR</button>
         </section>
 
     </main>
 
-    <footer>
-        Footer
-    </footer>
-</body>
+    <script type="text/javascript" src="js/script.js"></script>
+    
 
+</body>
 </html>
