@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>ENCRIPTADOR </title>
 </head>
 
@@ -18,19 +19,24 @@
 
     <main>
 
-        <section class="entrada">
-            <textarea class="chat-textarea" name="text-in" placeholder="Ingrese el texto" id="text-in"
-                ></textarea>
-            <div>
-                <button id="btn-encrip" class="button">ENCRIPTAR</button>
-                <button id="btn-desencrip" class="button">DESENCRIPTAR</button>
+        <section class="in">
+            <div class="textarea-container">
+                <textarea name="text-in" placeholder="Ingrese el texto..." id="text-in"></textarea>
+                <button id="btn-limpiar"><i class="fa fa-trash"></i></button>
+            </div>
+            <div class="btns-container">
+                <button id="btn-encrip"><i class="fa fa-lock"></i> ENCRIPTAR</button>
+                <button id="btn-desencrip"><i class="fa fa-unlock"></i> DESENCRIPTAR</button>
             </div>
         </section>
 
-        <section class="salida">
-            <textarea class="chat-textarea" name="text-out" placeholder="No se encontró ningun texto"
-                id="text-out" readonly></textarea>
-                <button id="btn-copy" class="button">COPIAR</button>
+        <section class="out">
+            <div class="textarea-container">
+            <textarea name="text-out" placeholder="No se encontró ningún texto" id="text-out" readonly></textarea>
+        </div>
+            <div class="btn-container">
+                <button id="btn-copy"><i class="fa fa-clipboard"></i> COPIAR</button>
+            </div>
         </section>
 
     </main>
