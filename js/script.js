@@ -11,12 +11,13 @@ La letra "u" es convertida para "ufat"
 */
 
 /* Declaración de variables */
+
 let textin = document.getElementById("text-in");
 let textout = document.getElementById("text-out");
 let btnEncriptar = document.getElementById("btn-encrip");
 let btnDesencriptar = document.getElementById("btn-desencrip");
 let btnCopiar = document.getElementById("btn-copy");
-
+textin.focus();
 
 
 //Al presionar el botón llamamos a la funcion de encriptar

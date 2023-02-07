@@ -9,7 +9,7 @@
     <title>ENCRIPTADOR </title>
 </head>
 
-<body class="bg">
+<body>
     <header>
         <nav>
             <img src="images/logoalura.svg" alt="Logo Alura">
@@ -17,24 +17,27 @@
     </header>
 
     <main>
- 
+
         <section class="entrada">
-            <textarea class="chat-textarea ui-box crt" name="text-in" placeholder="Ingrese el texto" id="text-in" cols="30" rows="10"></textarea>
+            <textarea class="chat-textarea" name="text-in" placeholder="Ingrese el texto" id="text-in"
+                ></textarea>
             <div>
-                <button id="btn-encrip" class="button btn-cyber-punk crt">ENCRIPTAR</button>
-                <button id="btn-desencrip" class="button btn-cyber-punk crt">DESENCRIPTAR</button>
+                <button id="btn-encrip" class="button">ENCRIPTAR</button>
+                <button id="btn-desencrip" class="button">DESENCRIPTAR</button>
             </div>
         </section>
 
         <section class="salida">
-            <textarea class="chat-textarea ui-box crt" name="text-out" placeholder="No se encontró ningun texto" id="text-out" cols="30" rows="10" readonly></textarea>
-            <button id="btn-copy" class="button btn-cyber-punk crt" >COPIAR</button>
+            <textarea class="chat-textarea" name="text-out" placeholder="No se encontró ningun texto"
+                id="text-out" readonly></textarea>
+                <button id="btn-copy" class="button">COPIAR</button>
         </section>
 
     </main>
 
     <script type="text/javascript" src="js/script.js"></script>
-    
 
+    <div class="scanlines"></div>
 </body>
+
 </html>
