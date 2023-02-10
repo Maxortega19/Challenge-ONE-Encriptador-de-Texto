@@ -1,13 +1,3 @@
-/* 
-Las "llaves" de encriptación que utilizaremos son las siguientes:
-La letra "e" es convertida para "enter"
-La letra "i" es convertida para "imes"
-La letra "a" es convertida para "ai"
-La letra "o" es convertida para "ober"
-La letra "u" es convertida para "ufat"
-*/
-
-
 //////////////////////////////////////////////////////
 // Declaración de variables //////////////////////////
 //////////////////////////////////////////////////////
@@ -15,10 +5,10 @@ La letra "u" es convertida para "ufat"
 
 let textIn = document.getElementById("text-in");
 let textOut = document.getElementById("text-out");
-let btnEncriptar = document.getElementById("btn-encrip");
-let btnDesencriptar = document.getElementById("btn-desencrip");
+let btnEncrypt = document.getElementById("btn-encrypt");
+let btnDecrypt = document.getElementById("btn-decrypt");
 let btnCopiar = document.getElementById("btn-copy");
-let btnLimpiar = document.getElementById("btn-limpiar");
+let btnClean = document.getElementById("btn-clean");
 
 
 //////////////////////////////////////////////////////
@@ -28,13 +18,13 @@ let btnLimpiar = document.getElementById("btn-limpiar");
 
 textIn.focus();
 //Al presionar el botón llamamos a la funcion de encriptar
-btnEncriptar.addEventListener("click", encriptar);
+btnEncrypt.addEventListener("click", encrypt);
 //Al presionar el botón llamamos a la funcion de desencriptar
-btnDesencriptar.addEventListener("click", desencriptar);
+btnDecrypt.addEventListener("click", decrypt);
 //Al presionar el botón llamamos a la funcion de copiar
-btnCopiar.addEventListener("click", copiar);
+btnCopiar.addEventListener("click", copy);
 //Al presionar el boton llamamos a la función para recargar el textarea
-btnLimpiar.addEventListener('click', limpiar);
+btnClean.addEventListener('click', clean);
 
 
 //////////////////////////////////////////////////////
@@ -42,61 +32,65 @@ btnLimpiar.addEventListener('click', limpiar);
 //////////////////////////////////////////////////////
 
 
-
-
-function validar(texto) {
+function validate(text) {
     // Se transforma a boolean(true or false) ya que match devuelve las mayusculas o sino null
     //A-Z mayuscula y los codigos son los acentos
-    let mayus = Boolean(texto.match(/[A-Z\u00E0-\u00FC]/));
-    return mayus;
+    let validation = Boolean(text.match(/[A-Z\u00E0-\u00FC]/));
+    return validation;
 }
 
 
-function encriptar() {
+function encrypt() {
 
-    let textoEncriptado = textIn.value; //se accede al valor del objeto
+    let encryptedText = textIn.value; //se accede al valor del objeto
 
-    if (validar(textoEncriptado) == true) {
+    if (validate(encryptedText) == true) {
         textIn.value = "Sólo se aceptan minúsculas y palabras sin acento";
-        setTimeout(limpiar, 5000); //Ejecutar la función de limpiar luego de 5s
+        setTimeout(clean, 5000); //Ejecutar la función de limpiar luego de 5s
     }
     else {
         // i: mayuscula o minúscula g: busca mas de una m: busca en mas de una linea
-        textoEncriptado = textoEncriptado.replace(/e/img, "enter");
-        textoEncriptado = textoEncriptado.replace(/i/img, "imes");
-        textoEncriptado = textoEncriptado.replace(/a/img, "ai");
-        textoEncriptado = textoEncriptado.replace(/o/img, "ober");
-        textoEncriptado = textoEncriptado.replace(/u/img, "ufat");
-        textoEncriptado = textoEncriptado.replace(/''/img, "");
-        textOut.innerHTML = textoEncriptado;
+        encryptedText = encryptedText.replace(/e/img, "enter");
+        encryptedText = encryptedText.replace(/i/img, "imes");
+        encryptedText = encryptedText.replace(/a/img, "ai");
+        encryptedText = encryptedText.replace(/o/img, "ober");
+        encryptedText = encryptedText.replace(/u/img, "ufat");
+        encryptedText = encryptedText.replace(/''/img, "");
+
+        textOut.classList.toggle("radiationS");
+
+        textOut.innerHTML = encryptedText;
         textOut.focus();
     }
 }
 
 
+function decrypt() {
+    let encryptedText = textIn.value;
 
-function desencriptar() {
-    let textoEncriptado = textIn.value;
-
-    if (validar(textoEncriptado) == true) {
+    if (validate(encryptedText) == true) {
         textIn.value = "Sólo se aceptan minúsculas y palabras sin acento";
-        setTimeout(limpiar, 5000); //Ejecutar la función de limpiar luego de 5s
+        setTimeout(clean, 5000); //Ejecutar la función de limpiar luego de 5s
     }
     else {
-        textoEncriptado = textoEncriptado.replace(/enter/img, "e");
-        textoEncriptado = textoEncriptado.replace(/imes/img, "i");
-        textoEncriptado = textoEncriptado.replace(/ai/img, "a");
-        textoEncriptado = textoEncriptado.replace(/ober/img, "o");
-        textoEncriptado = textoEncriptado.replace(/ufat/img, "u");
-        textoEncriptado = textoEncriptado.replace(/''/img, "");
-        textOut.innerHTML = textoEncriptado;
+
+        encryptedText = encryptedText.replace(/enter/img, "e");
+        encryptedText = encryptedText.replace(/imes/img, "i");
+        encryptedText = encryptedText.replace(/ai/img, "a");
+        encryptedText = encryptedText.replace(/ober/img, "o");
+        encryptedText = encryptedText.replace(/ufat/img, "u");
+        encryptedText = encryptedText.replace(/''/img, "");
+
+        textOut.classList.toggle("radiationS");
+
+        textOut.innerHTML = encryptedText;
         textOut.focus();
     }
 
 }
 
 
-function copiar() {
+function copy() {
     if (textOut.value !== "") {
         textOut.select(); // Selección del campo de texto
         textOut.setSelectionRange(0, 99999); // Para dispositivos móviles
@@ -106,8 +100,7 @@ function copiar() {
 }
 
 
-
-function limpiar() {
+function clean() {
     textIn.value = "";
     textOut.value = "";
     textIn.placeholder = "Ingrese el texto...";

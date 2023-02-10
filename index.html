@@ -13,40 +13,36 @@
 <body>
     <header>
         <nav>
-            <div class="img"></div>
+            <div class="logo"></div>
             <h1>ENCRIPTADOR ALURA<span>_</span></h1>
         </nav>
     </header>
-
     <main>
-
-        <section class="in">
+        <section class="in-section">
             <div class="textarea-container">
                 <textarea name="text-in" placeholder="Ingrese el texto..." id="text-in"></textarea>
-                <button id="btn-limpiar"><i class="fa fa-trash"></i></button>
+                <button id="btn-clean"><i class="fa fa-trash"></i></button>
             </div>
-            <div class="btns-container">
-                <button id="btn-encrip"><i class="fa fa-lock"></i> ENCRIPTAR</button>
-                <button id="btn-desencrip"><i class="fa fa-unlock"></i> DESENCRIPTAR</button>
+            <div class="btn-container">
+                <button id="btn-encrypt"><i class="fa fa-lock"></i> ENCRIPTAR</button>
+                <button id="btn-decrypt"><i class="fa fa-unlock"></i> DESENCRIPTAR</button>
             </div>
         </section>
-
-        <section class="out">
+        <section class="out-section">
             <div class="textarea-container">
-                <textarea name="text-out" placeholder="No se encontró ningún texto" id="text-out" readonly></textarea>
+                <textarea name="text-out" class="radiation" placeholder="No se encontró ningún texto" id="text-out"
+                    readonly></textarea>
             </div>
             <div class="btn-container">
                 <button id="btn-copy"><i class="fa fa-clipboard"></i> COPIAR</button>
             </div>
         </section>
-
     </main>
-    <div class="scanlines"></div>
     <footer>
         <p><i class="fa fa-copyright"></i> 2023 - Desarrollado por <a
-                href="https://github.com/Maxortega19">Maxortega19<span>_</span> </a></p>
+                href="https://github.com/Maxortega19">Maxortega19<span>_</span></a></p>
     </footer>
-
+    <div class="scanlines"></div>
     <script type="text/javascript" src="js/script.js"></script>
 </body>
 

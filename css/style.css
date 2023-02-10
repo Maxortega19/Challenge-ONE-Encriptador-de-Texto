@@ -1,16 +1,21 @@
-:root {
-    --celeste: #7Cbdbd;
-    --turquesa: #14fdce;
-    --blue: #111117;
-    --shadow: rgba(0, 255, 255, 0.2);
-}
+/*////////////////////////////////////////////////////
+// DISEÑO GENERAL/////////////////////////////////////
+////////////////////////////////////////////////////*/
 
 
 @import url('https://fonts.googleapis.com/css2?family=Orbitron&family=Share+Tech+Mono&display=swap');
 
 
-/*universal setting for no body margins*/
+:root {
+    --skyblue: #7Cbdbd;
+    --turquoise: #14fdce;
+    --blue: #111117;
+    --darkshadow: rgba(0, 255, 255, 0.2);
+}
+
+
 * {
+    /* Configuracion Universal */
     margin: 0;
     padding: 0;
     -webkit-box-sizing: border-box;
@@ -29,198 +34,13 @@ html,
 body {
     height: 100%;
     background: var(--blue);
-    box-shadow: 0 0 12rem var(--shadow) inset;
+    box-shadow: 0 0 12rem var(--darkshadow) inset;
     animation-name: glowing;
     animation-duration: 5s;
     animation-timing-function: ease-in-out;
     animation-direction: alternate;
     animation-iteration-count: infinite;
 }
-
-
-header {
-    width: 100%;
-    /* arriba y abajo | izquierda y derecha */
-    padding: 2rem 4rem 1rem;
-}
-
-.img {
-    background-image: url("../images/logoalura.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 4rem;
-    height: 4rem;
-    padding: 2rem;
-    border: solid 4px var(--celeste);
-    border-radius: 100%;
-    box-shadow: 0rem 0.1rem 0.6rem var(--turquesa);
-    animation: crt-blink 1ms infinite ease-in-out, girar 2s infinite ease-in-out;
-}
-
-
-nav {
-    display: flex;
-    justify-content: start;
-    align-items: center;
-}
-
-
-h1 {
-    padding: 0rem 4rem;
-    font-weight: 200;
-    text-transform: uppercase;
-    color: var(--celeste);
-    text-shadow: 0rem 0.1rem 1rem var(--turquesa);
-    font-size: 2rem;
-}
-
-
-span {
-    animation: crt-blink 1s infinite;
-}
-
-
-main {
-    width: 100%;
-    height: 60%;
-    justify-content: space-between;
-    display: flex;
-    flex-wrap: wrap;
-    /* Dirección en fila */
-    flex-direction: row;
-    padding: 1rem 4rem;
-}
-
-.in {
-    width: 70%;
-}
-
-.out {
-    width: 20%;
-}
-
-
-footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-    padding: 2rem 0rem;
-}
-
-
-p {
-    color: var(--celeste);
-    font-size: 0.9rem;
-    text-shadow: 0rem 0.08rem 0.2rem var(--turquesa);
-}
-
-
-p>a {
-    color: var(--celeste);
-    text-decoration: none;
-    text-shadow: 0rem 0.08rem 0.2rem var(--turquesa);
-
-}
-
-section>textarea::placeholder,
-.textarea-container>textarea::placeholder {
-    color: var(--celeste);
-    opacity: 0.5;
-}
-
-
-textarea {
-    background-color: transparent;
-    font-size: 1rem;
-    color: var(--celeste);
-    padding: 1rem;
-    width: 100%;
-    height: 100%;
-    resize: none;
-    border: solid 1px var(--celeste);
-    transition: all 0.6s linear;
-    box-sizing: border-box;
-}
-
-textarea:focus {
-    outline: none;
-    border: solid 3px var(--celeste);
-    box-shadow: 0px 0px 10px 2px var(--celeste) inset;
-}
-
-.textarea-container {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    margin-bottom: 3px;
-}
-
-
-.textarea-container textarea {
-    background-color: transparent;
-    font-size: 1rem;
-    color: var(--celeste);
-    padding: 1rem;
-    width: 100%;
-    height: 100%;
-    resize: none;
-    border: solid 1px var(--celeste);
-    transition: all 0.6s linear;
-    box-sizing: border-box;
-}
-
-
-.textarea-container textarea:focus {
-    outline: none;
-    border: solid 3px var(--celeste);
-    box-shadow: 0px 0px 10px 2px var(--turquesa) inset;
-}
-
-.textarea-container button {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 10%;
-    text-align: center;
-}
-
-
-.btns-container,
-.btn-container {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-}
-
-button {
-    background: transparent;
-    padding: 10px 18px;
-    border: 1px solid var(--celeste);
-    font-family: 'Orbitron', sans-serif;
-    font-size: 1rem;
-    font-weight: 400;
-    text-align: center;
-    width: 50%;
-    color: var(--celeste);
-    transition: all 0.6s linear;
-    text-shadow: 0rem 0.08rem 0.2rem var(--turquesa);
-}
-
-.btns-container>button {
-    width: 50%;
-}
-
-.btn-container>button {
-    width: 100%;
-}
-
-button:hover {
-    color: var(--blue);
-    background: var(--celeste);
-    text-shadow: 0rem 0.08rem 0.2rem var(--turquesa);
-}
-
 
 
 .scanlines {
@@ -240,7 +60,7 @@ button:hover {
 }
 
 .scanlines::before {
-    animation: crt-output 10ms infinite;
+    animation: blink-lines 10ms infinite;
     background: rgba(129, 243, 253, 0.75);
     content: '';
     display: block;
@@ -251,13 +71,224 @@ button:hover {
     height: 100%;
 }
 
-@keyframes girar {
-    100% {
-        transform: rotate(360deg);
-    }
+
+/*////////////////////////////////////////////////////
+// HEADER ////////////////////////////////////////////
+////////////////////////////////////////////////////*/
+
+
+header {
+    width: 100%;
+    /* arriba y abajo | izquierda y derecha */
+    padding: 2rem 4rem 1rem;
 }
 
-@keyframes crt-output {
+
+nav {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+
+.logo {
+    background-image: url("../images/logoalura.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 4rem;
+    height: 4rem;
+    padding: 2rem;
+    border: solid 4px var(--skyblue);
+    border-radius: 100%;
+    box-shadow: 0rem 0.1rem 0.6rem var(--turquoise);
+    animation: blink 1ms infinite ease-in-out, spin 2s infinite ease-in-out;
+}
+
+
+h1 {
+    padding: 0rem 4rem;
+    font-weight: 200;
+    text-transform: uppercase;
+    color: var(--skyblue);
+    text-shadow: 0rem 0.1rem 1rem var(--turquoise);
+    font-size: 2rem;
+}
+
+
+span {
+    animation: blink 1s infinite;
+}
+
+
+/*////////////////////////////////////////////////////
+// SECCIÓN DEL CUERPO/////////////////////////////////
+////////////////////////////////////////////////////*/
+
+
+main {
+    width: 100%;
+    height: 60%;
+    justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+    /* Dirección en fila */
+    flex-direction: row;
+    padding: 1rem 4rem;
+}
+
+
+.in-section {
+    width: 70%;
+}
+
+
+.out-section {
+    width: 20%;
+}
+
+
+/*////////////////////////////////////////////////////
+// TEXTAREA/////////////// ///////////////////////////
+////////////////////////////////////////////////////*/
+
+
+.textarea-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 3px;
+}
+
+
+.textarea-container>textarea {
+    background-color: transparent;
+    font-size: 1rem;
+    color: var(--skyblue);
+    padding: 1rem;
+    width: 100%;
+    height: 100%;
+    resize: none;
+    border: solid 1px var(--skyblue);
+    transition: all 0.6s linear;
+    box-sizing: border-box;
+
+}
+
+
+.textarea-container>textarea::placeholder {
+    color: var(--skyblue);
+    opacity: 0.5;
+}
+
+
+.textarea-container>textarea:focus {
+    outline: none;
+    border: solid 3px var(--skyblue);
+    box-shadow: 0px 0px 10px 2px var(--turquoise) inset;
+}
+
+
+.textarea-container>button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 15%;
+    text-align: center;
+}
+
+
+.radiation {
+    background-image: url(../images/ra.svg);
+    background-size: 70%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    transition: background-image 0.5s ease;
+    transition: background-size 0.5s ease;
+}
+
+.radiationS {
+    background-image: url(../images/ra.svg);
+    background-size: 0%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    transition: background-image 0.5s ease;
+    transition: background-size 0.5s ease;
+}
+
+
+/*////////////////////////////////////////////////////
+// BOTONES ///////////////////////////////////////////
+////////////////////////////////////////////////////*/
+
+
+button {
+    background: transparent;
+    padding: 10px 18px;
+    border: 1px solid var(--skyblue);
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 400;
+    text-align: center;
+    width: 50%;
+    color: var(--skyblue);
+    transition: all 0.6s linear;
+    text-shadow: 0rem 0.08rem 0.2rem var(--turquoise);
+}
+
+button:hover {
+    color: var(--blue);
+    background: var(--skyblue);
+    text-shadow: 0rem 0.08rem 0.2rem var(--turquoise);
+}
+
+
+.btn-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+
+.btn-container>button {
+    width: 100%;
+}
+
+
+/*////////////////////////////////////////////////////
+// DISEÑO DEL FOOTER//////////////////////////////////
+////////////////////////////////////////////////////*/
+
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 2rem 0rem;
+}
+
+
+p {
+    color: var(--skyblue);
+    font-size: 0.9rem;
+    text-shadow: 0rem 0.08rem 0.2rem var(--turquoise);
+}
+
+
+p>a {
+    color: var(--skyblue);
+    text-decoration: none;
+    text-shadow: 0rem 0.08rem 0.2rem var(--turquoise);
+
+}
+
+
+/*////////////////////////////////////////////////////
+// ANIMACIONES ///////////////////////////////////////
+////////////////////////////////////////////////////*/
+
+
+@keyframes blink-lines {
     0% {
         opacity: 0.85;
     }
@@ -267,7 +298,15 @@ button:hover {
     }
 }
 
-@keyframes crt-blink {
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+@keyframes blink {
     0% {
         opacity: 0;
     }
@@ -297,21 +336,59 @@ button:hover {
 }
 
 
+/*////////////////////////////////////////////////////
+// MEDIAQUERIES //////////////////////////////////////
+////////////////////////////////////////////////////*/
+
 
 /* Cuando la pantalla es menor a 700px la dirección de los items flex va a ser uno bajo al otro */
 @media screen and (max-width: 700px) {
+
+    /* width */
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+        background: var(--blue);
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background: var(--skyblue);
+    }
+
+    body {
+        overflow-y: scroll;
+        overflow-x: hidden;
+        height: 100%;
+    }
+
     main {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        height: 100%;
     }
 
-    .in {
-        padding-bottom: 5rem;
+    .in-section {
+        padding-bottom: 8rem;
         width: 100%;
     }
 
-    .out {
+    .out-section {
         width: 100%;
+    }
+
+    .radiation {
+        background-size: 0%;
+    }
+
+    footer {
+        position: relative;
+        width: 100%;
+        text-align: center;
+        padding: 2rem 0rem;
     }
 }
