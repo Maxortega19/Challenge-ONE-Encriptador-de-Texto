@@ -20,7 +20,7 @@
 <div style="color: #111117;" align="left">
 
 
-##### El reto consiste en crear una página web que cifre y descifre el texto ingresado por el usuario y mostrarlo en su forma cifrada o descifrada. El objetivo de este reto es evaluar los conocimientos adquiridos durante el curso "Principiante en programación".  
+#### El reto consiste en crear una página web que cifre y descifre el texto ingresado por el usuario y mostrarlo en su forma cifrada o descifrada. El objetivo de este reto es evaluar los conocimientos adquiridos durante el curso "Principiante en programación".  
 
 </div>
 
@@ -34,7 +34,7 @@
 
 <div style="color: #111117;" align="left">
   
-##### Puedes ver el proyecto desplegado en [en este enlace](hthttps://maxortega19.github.io/Encriptador-de-Texto/ )
+#### Puedes ver el proyecto desplegado en este [enlace](https://maxortega19.github.io/Encriptador-de-Texto/).
 
 <div>
 
@@ -49,15 +49,15 @@
 
 <div style="color: #111117;" align="left">
 
-##### - Debe funcionar solo con letras minúsculas
+#### - Debe funcionar solo con letras minúsculas
 
-##### - No deben ser utilizados letras con acentos ni caracteres especiales
+#### - No deben ser utilizados letras con acentos ni caracteres especiales
 
-##### - Debe ser posible convertir una palabra para la versión encriptada también devolver una palabra encriptada para su versión original.
+#### - Debe ser posible convertir una palabra para la versión encriptada también devolver una palabra encriptada para su versión original.
 
-##### - La página debe tener campos para inserción del texto que será encriptado o desencriptado, y el usuario debe poder escoger entre as dos opciones.
+#### - La página debe tener campos para inserción del texto que será encriptado o desencriptado, y el usuario debe poder escoger entre as dos opciones.
 
-##### - El resultado debe ser mostrado en la pantalla.  
+#### - El resultado debe ser mostrado en la pantalla.  
 
 </div>
 
@@ -71,9 +71,9 @@
 
 <div style="color: #111117;" align="left">
 
-##### Un botón que copie el texto encriptado/desencriptado para la sección de transferencia, o sea que tenga la misma funcionalidad del <code>Ctrl+C</code> o de la opción "Copiar" del menú de las aplicaciones.
+#### Un botón que copie el texto encriptado/desencriptado para la sección de transferencia, o sea que tenga la misma funcionalidad del <code>Ctrl+C</code> o de la opción "Copiar" del menú de las aplicaciones.
 
-##### El diseño debe ser responsivo, es decir se debe adaptar y mantener el diseño para diferentes tipos de pantallas.
+#### El diseño debe ser responsivo, es decir se debe adaptar y mantener el diseño para diferentes tipos de pantallas.
 
 </div>
 
@@ -81,23 +81,23 @@
 
 <div style="color: #7Cbdbd;">
 
-### 🔑 Llaves de encriptación
+## 🔑 Llaves de encriptación
 
 </div>
 
 <div style="color: #111117;" align="left">
 
-##### La letra "e" es convertida para "enter"
+#### La letra "e" es convertida para "enter"
 
-##### La letra "i" es convertida para "imes"
+#### La letra "i" es convertida para "imes"
 
-##### La letra "a" es convertida para "ai"
+#### La letra "a" es convertida para "ai"
 
-##### La letra "o" es convertida para "ober"
+#### La letra "o" es convertida para "ober"
 
-##### La letra "u" es convertida para "ufat"
+#### La letra "u" es convertida para "ufat"
 
-#####  ```Por ejemplo: "gato" => "gaitober" "gaitober" => "gato"```
+####  ```Por ejemplo: "gato" => "gaitober" "gaitober" => "gato"```
 
 </div>
 
@@ -111,7 +111,7 @@
 
 <div style="color: #111117;" align="left">
 
-##### ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) 
+#### ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) 
 
 </div>
 
