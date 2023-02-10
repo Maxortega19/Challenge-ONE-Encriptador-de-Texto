@@ -13,7 +13,7 @@
 
 <div style="color: #7Cbdbd;">
 
-### 📃 Resumen
+## 📃 Resumen
 
 </div>
 
