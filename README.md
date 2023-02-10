@@ -28,7 +28,7 @@
 
 <div style="color: #7Cbdbd;">
 
-### 🚀 Despliegue
+## 🚀 Despliegue
 
 </div>
 
@@ -43,7 +43,7 @@
 
 <div style="color: #7Cbdbd;">
 
-### 📑 Requisitos
+## 📑 Requisitos
 
 </div>
 
@@ -65,7 +65,7 @@
 
 <div style="color: #7Cbdbd;">
 
-### ➕ Extras
+## ➕ Extras
 
 </div>
 
@@ -97,7 +97,7 @@
 
 ##### La letra "u" es convertida para "ufat"
 
-  ```Por ejemplo: "gato" => "gaitober" "gaitober" => "gato"```
+#####  ```Por ejemplo: "gato" => "gaitober" "gaitober" => "gato"```
 
 </div>
 
@@ -105,7 +105,7 @@
 
 <div style="color: #7Cbdbd;">
 
-### 🔨  Stack
+## 🔨  Stack
 
 </div>
 
