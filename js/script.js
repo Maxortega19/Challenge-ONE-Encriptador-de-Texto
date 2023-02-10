@@ -35,7 +35,8 @@ btnClean.addEventListener('click', clean);
 function validate(text) {
     // Se transforma a boolean(true or false) ya que match devuelve las mayusculas o sino null
     //A-Z mayuscula y los codigos son los acentos
-    let validation = Boolean(text.match(/[A-Z\u00E0-\u00FC]/));
+    let validation = Boolean(text.match(/[A-ZÀ-ÖØ-öø-ÿ\u00E0-\u00FC]/));
+
     return validation;
 }
 
